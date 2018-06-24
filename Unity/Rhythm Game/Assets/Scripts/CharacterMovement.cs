@@ -12,7 +12,7 @@ public class CharacterMovement : MonoBehaviour {
 	}
 
 	public void Move(Vector2 direction) {
-		rb.velocity = direction * speed;
+		rb.velocity = direction.normalized * speed;
 		if (direction.magnitude > 0.01)
 			transform.rotation = Quaternion.LookRotation(Vector3.back, direction);
 	}
