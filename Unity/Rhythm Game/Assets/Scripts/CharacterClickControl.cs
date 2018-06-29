@@ -6,7 +6,7 @@ using UnityEngine;
 public class CharacterClickControl : MonoBehaviour {
 	private const int MOUSE_LEFT = 0;
 	private bool followingClick;
-	private Vector2 clickDirection;
+	private Vector2 clickPosition;
 	private Camera camera;
 	private CharacterMovement movement;
 
@@ -19,15 +19,13 @@ public class CharacterClickControl : MonoBehaviour {
 		if (Input.GetMouseButtonDown (MOUSE_LEFT) && !clickingButtons()) {
 			followingClick = true;
 
-			clickDirection = ((Vector2)Input.mousePosition * 2 - new Vector2(Screen.width, Screen.height))
+			clickPosition = ((Vector2)Input.mousePosition * 2 - new Vector2(Screen.width, Screen.height))
 				* camera.orthographicSize / Screen.height + (Vector2)transform.position;
+			movement.Move((clickPosition - (Vector2)transform.position));
 		}
 		if (followingClick) {
-			if ((clickDirection - (Vector2)transform.position).magnitude <= 0.2f) followingClick = false;
-			movement.Move((clickDirection - (Vector2)transform.position));
-		} else {
-			movement.Move(Vector2.zero);
-		}
+			followingClick = ((clickPosition - (Vector2)transform.position).magnitude > 0.2f);
+		} else movement.Move(Vector2.zero);
 	}
 
 	bool clickingButtons() {
