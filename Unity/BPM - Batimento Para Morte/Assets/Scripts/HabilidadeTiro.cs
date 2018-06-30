@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HabilidadeTiro : MonoBehaviour {
 	[SerializeField] private Transform origemTiro;
-	[SerializeField] private float velocidade = 1.5f;
+	[SerializeField] private float velocidade = 0;
 	[SerializeField] private GameObject[] municao;
 	
 	public void Atirar(int indice) {

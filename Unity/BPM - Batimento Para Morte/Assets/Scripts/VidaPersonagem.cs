@@ -4,7 +4,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(Collider2D))]
 public class VidaPersonagem : MonoBehaviour {
-	private int vida;
+    [SerializeField] private int vida;
 	[SerializeField] private int vidaMax = 1000000000;
 
 	void Awake () {
