@@ -4,51 +4,48 @@ using UnityEngine;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(MovimentoPersonagem))]
-[RequireComponent(typeof(HabilidadeTiro))]
+
 public class ControlePersonagem : MonoBehaviour {
     const int MOUSE_LEFT = 0;
     private MovimentoPersonagem movimento;
-    private HabilidadeTiro habTiro;
+  
 
     private Camera camera;
     private bool seguindoMouse = false;
     private Vector3 direction;
 
     [Header("Teclas")]
-    [SerializeField] private KeyCode teclaTiroGrave = KeyCode.Z;
-    [SerializeField] private KeyCode teclaTiroAgudo = KeyCode.X;
+    [SerializeField] private KeyCode ataque = KeyCode.Z;
+  
     [Header("Botões")]
     [SerializeField] private RectTransform areaBotoes;
-    [SerializeField] private Button botaoTiroGrave;
+    [SerializeField] private Button botaoTiroGrave; //ataque
     [SerializeField] private Button botaoTiroAgudo;
-    private GameObject muletinha;
     private GameObject mira;
-
+ 
     void Awake() {
         movimento = GetComponent<MovimentoPersonagem>();
-        habTiro = GetComponent<HabilidadeTiro>();
-        //if (botaoTiroGrave != null) botaoTiroGrave.onClick.AddListener(() => habTiro.Atirar(0));
-        //if (botaoTiroAgudo != null) botaoTiroAgudo.onClick.AddListener(() => habTiro.Atirar(1));
-
         camera = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
+        mira = GameObject.FindGameObjectWithTag("mira");
+        mira.SetActive(false);
+       
     }
 
     void Start()
     {
-        muletinha = GameObject.FindGameObjectWithTag("muleta_frontal");
-        mira = GameObject.FindGameObjectWithTag("mira");
-        //InvokeRepeating("tiroNaBatida", 1f, 0.1f);
+  
+       
     }
 
-    public void Atirar() {
-        
-        habTiro.Atirar(0);
-        //if (botaoTiroAgudo != null) botaoTiroAgudo.onClick.AddListener(() => habTiro.Atirar(1));
+    public IEnumerator Atacar(){
+        mira.SetActive(!mira.activeSelf);
+        yield return new WaitForSeconds(1);
+        mira.SetActive(!mira.activeSelf);
     }
 
     void Update () {
-		//if (Input.GetKeyDown(teclaTiroGrave)) habTiro.Atirar(0);
-		//if (Input.GetKeyDown(teclaTiroAgudo)) habTiro.Atirar(1);
+	
+        
 		Vector2 setas = new Vector2 (Input.GetAxis ("Horizontal"), Input.GetAxis ("Vertical"));
 		if (setas.magnitude > 0.5f) {
 			movimento.Andar (setas.normalized);
@@ -85,15 +82,5 @@ public class ControlePersonagem : MonoBehaviour {
 		return (min <= val) && (val <= max);
 	}
 
-    void tiroNaBatida()
-    {
-        //bool retorno = false;
-        Collider2D mu = muletinha.GetComponent<Collider2D>();
-        Collider2D mir = mira.GetComponent<Collider2D>();
-        if(Input.GetKeyDown(teclaTiroGrave) && mu.IsTouching(mir))
-        {
-           // Debug.Log("tô na batida :D");
-        }
-       // return retorno;
-    }
+ 
 }

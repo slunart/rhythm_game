@@ -19,15 +19,7 @@ public class Cronometro : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         tempo += Time.deltaTime;
-        //UIText.text = tempo.ToString();
-
-        //if (Input.GetKeyDown(KeyCode.Z)) {
-        //    if(((tempo % 1 ) <= 0.30) && (tempo % 1) >= 0){
-        //        Debug.Log("acertou batida");
-        //        cont++;
-        //        UIText.text = "acertou o tempo " + cont.ToString() + "x";
-
-        //    }
+            //Se musica esta Tocando e Aperta Z, entre os momentos certo
             if (!isPlaying && Input.GetKeyDown(KeyCode.Z))
             {
                 if (((tempo % 1) <= 0.40) && (tempo % 1) >= 0){
@@ -36,12 +28,14 @@ public class Cronometro : MonoBehaviour {
                     if (cont == 1) UIText.text = "Acertou a batida: " + cont.ToString() + " vez";
                     else
                         UIText.text = "Acertou a batida: " + cont.ToString() + " vezes";
-                    personagem.Atirar();
-                    Debug.Log(tempo);
+                    
+                StartCoroutine(personagem.Atacar());
+                Debug.Log(tempo);
                 }
                 else {
+                    Debug.Log("Errou a Batida");
                     v = personagem.GetComponent<VidaPersonagem>();
-                    v.SofrerDano(3000);
+                    v.SofrerDano(1000);
                 }
             }
 
@@ -51,6 +45,6 @@ public class Cronometro : MonoBehaviour {
             }
 
             // Debug.Log("time:"+tempo);
-       // }
+
 	}
 }

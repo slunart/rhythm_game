@@ -7,6 +7,7 @@ TagManager:
   - muleta_frontal
   - muleta_costas
   - mira
+  - Enemy
   layers:
   - Default
   - TransparentFX
