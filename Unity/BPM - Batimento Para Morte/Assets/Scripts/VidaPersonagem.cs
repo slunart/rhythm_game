@@ -13,11 +13,12 @@ public class VidaPersonagem : MonoBehaviour {
         anim = GetComponent<Animator>();
 	}
 
-	public void SofrerDano(int dano) {
+	public IEnumerator SofrerDano(int dano) {
 		vida -= dano;
         if (vida <= 0)
         {
             anim.SetTrigger("foiAbatido");
+            yield return new WaitForSeconds(2.5f);
             Destroy(gameObject);
         }
 	}
