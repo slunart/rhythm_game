@@ -11,8 +11,19 @@ public class danoPlayer : MonoBehaviour {
         if (collision.collider.CompareTag("Player")) { 
             vpo = collision.collider.GetComponent<VidaPersonagem>();
             vpo.SofrerDano(dano);
+            Debug.Log("Inimigo Causa dano");
+             
+             //knockback
+             var magnitude = 2000;
+             // calculate force vector
+             var force = transform.position - collision.transform.position;
+             // normalize force vector to get direction only and trim magnitude
+             force.Normalize();
+             collision.rigidbody.AddForce(- force * magnitude);
+
         }
     }
+
     
 
     

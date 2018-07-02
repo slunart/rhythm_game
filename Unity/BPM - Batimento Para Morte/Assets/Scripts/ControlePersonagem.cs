@@ -22,12 +22,15 @@ public class ControlePersonagem : MonoBehaviour {
     [SerializeField] private Button botaoTiroGrave; //ataque
     [SerializeField] private Button botaoTiroAgudo;
     private GameObject mira;
- 
+	private GameObject fire;
+
     void Awake() {
         movimento = GetComponent<MovimentoPersonagem>();
         camera = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
         mira = GameObject.FindGameObjectWithTag("mira");
+		fire =GameObject.FindGameObjectWithTag("Effect");
         mira.SetActive(false);
+		fire.SetActive(false);
        
     }
 
@@ -38,14 +41,16 @@ public class ControlePersonagem : MonoBehaviour {
     }
 
     public IEnumerator Atacar(){
+		fire.SetActive(!fire.activeSelf);
         mira.SetActive(!mira.activeSelf);
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(2);
         mira.SetActive(!mira.activeSelf);
+		fire.SetActive(!fire.activeSelf);
     }
 
     void Update () {
 	
-        
+
 		Vector2 setas = new Vector2 (Input.GetAxis ("Horizontal"), Input.GetAxis ("Vertical"));
 		if (setas.magnitude > 0.5f) {
 			movimento.Andar (setas.normalized);
