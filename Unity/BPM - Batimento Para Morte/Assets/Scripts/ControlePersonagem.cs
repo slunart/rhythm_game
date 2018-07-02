@@ -14,6 +14,7 @@ public class ControlePersonagem : MonoBehaviour {
     private bool seguindoMouse = false;
     private Vector3 direction;
 
+
     [Header("Teclas")]
     [SerializeField] private KeyCode ataque = KeyCode.Z;
   
@@ -23,27 +24,34 @@ public class ControlePersonagem : MonoBehaviour {
     [SerializeField] private Button botaoTiroAgudo;
     private GameObject mira;
 	private GameObject fire;
+	private VidaPersonagem vidaPersonagem;
+	private bool alive;
+
 
     void Awake() {
         movimento = GetComponent<MovimentoPersonagem>();
         camera = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
         mira = GameObject.FindGameObjectWithTag("mira");
 		fire =GameObject.FindGameObjectWithTag("Effect");
+		
         mira.SetActive(false);
 		fire.SetActive(false);
+		
        
     }
 
     void Start()
     {
-  
+		vidaPersonagem = this.GetComponent<VidaPersonagem>();
+		alive = true;
+		
        
     }
 
     public IEnumerator Atacar(){
 		fire.SetActive(!fire.activeSelf);
         mira.SetActive(!mira.activeSelf);
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1);
         mira.SetActive(!mira.activeSelf);
 		fire.SetActive(!fire.activeSelf);
     }
@@ -73,6 +81,13 @@ public class ControlePersonagem : MonoBehaviour {
 				movimento.Andar (Vector2.zero);
 			}
 		}
+
+		if(vidaPersonagem.isDead()){
+			if(alive){
+				StartCoroutine(death());
+			}
+
+		}
 	}
 
 	bool clicandoBotoes() {
@@ -86,6 +101,13 @@ public class ControlePersonagem : MonoBehaviour {
 	bool entre(float min, float val, float max) {
 		return (min <= val) && (val <= max);
 	}
+
+	 public IEnumerator death(){
+	    alive = false;
+		//Tempo para a duração da animação
+        yield return new WaitForSeconds(3f);
+		Destroy(gameObject);
+ 	}
 
  
 }

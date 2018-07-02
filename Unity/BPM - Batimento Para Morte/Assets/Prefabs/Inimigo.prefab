@@ -23,12 +23,12 @@ GameObject:
   - component: {fileID: 114706453841826448}
   - component: {fileID: 50442494078708792}
   - component: {fileID: 61392788971411570}
-  - component: {fileID: 114486353878501276}
   - component: {fileID: 114040318644974718}
   - component: {fileID: 95050334489412490}
+  - component: {fileID: 114928055088184240}
   m_Layer: 0
   m_Name: Inimigo
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -82,7 +82,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.45, y: 3.62}
+    oldSize: {x: 4.48, y: 1.69}
     newSize: {x: 2.45, y: 3.62}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -121,20 +121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
-  minDist: 0
---- !u!114 &114486353878501276
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1821309871414334}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 770a81ead0bae3e4a821b851a5953531, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  vida: 3000
-  vidaMax: 1000000
+  minDist: 1
 --- !u!114 &114706453841826448
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -147,6 +134,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dano: 1000
+--- !u!114 &114928055088184240
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1821309871414334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 770a81ead0bae3e4a821b851a5953531, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vida: 2000
+  vidaMax: 2000
 --- !u!212 &212219285483628508
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -182,7 +182,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 162f8b8e2b9371d41b10274933f5a4b8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ed5f961a5e360434bb30dea8174d57da, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

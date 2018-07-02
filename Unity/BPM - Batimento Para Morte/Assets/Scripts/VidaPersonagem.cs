@@ -13,6 +13,12 @@ public class VidaPersonagem : MonoBehaviour {
 
 	public void SofrerDano(int dano) {
 		vida -= dano;
-		if (vida <= 0) Destroy(gameObject);
 	}
+
+	public bool isDead() {
+		if (vida <= 0) return true;
+		else return false;
+	}
+
+
 }
