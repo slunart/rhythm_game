@@ -23,13 +23,14 @@ public class ControlePersonagem : MonoBehaviour {
     [SerializeField] private Button botaoTiroAgudo;
     private GameObject muletinha;
     private GameObject mira;
+    Animator anim;
 
     void Awake() {
         movimento = GetComponent<MovimentoPersonagem>();
         habTiro = GetComponent<HabilidadeTiro>();
         //if (botaoTiroGrave != null) botaoTiroGrave.onClick.AddListener(() => habTiro.Atirar(0));
         //if (botaoTiroAgudo != null) botaoTiroAgudo.onClick.AddListener(() => habTiro.Atirar(1));
-
+        anim = GetComponent<Animator>();
         camera = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
     }
 
@@ -52,7 +53,7 @@ public class ControlePersonagem : MonoBehaviour {
 		Vector2 setas = new Vector2 (Input.GetAxis ("Horizontal"), Input.GetAxis ("Vertical"));
 		if (setas.magnitude > 0.5f) {
 			movimento.Andar (setas.normalized);
-			seguindoMouse = false;
+            seguindoMouse = false;
 		} else {
 			if (Input.GetMouseButtonDown (MOUSE_LEFT) && !clicandoBotoes()) {
 				seguindoMouse = true;
@@ -67,11 +68,14 @@ public class ControlePersonagem : MonoBehaviour {
 			if (seguindoMouse) {
 				if ((direction - transform.position).magnitude <= 0.2f) seguindoMouse = false;
 				movimento.Andar ((direction - transform.position).normalized);
-			} else {
+            } else {
 				movimento.Andar (Vector2.zero);
-			}
+                anim.SetBool("estaAndando", false);
+            }
 		}
-	}
+      
+    }
+
 
 	bool clicandoBotoes() {
 		Vector3[] corners = new Vector3[4];
