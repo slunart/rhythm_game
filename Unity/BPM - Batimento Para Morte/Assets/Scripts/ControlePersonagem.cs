@@ -18,11 +18,11 @@ public class ControlePersonagem : MonoBehaviour {
 
 
     [Header("Teclas")]
-    [Tooltip("Tecla do ataque")][SerializeField] private KeyCode teclaTiroGrave = KeyCode.Z;
+    [Tooltip("Tecla do ataque")][SerializeField] private KeyCode ataque = KeyCode.Z;
     [Header("Botões")]
     [Tooltip("Área da GUI reservada para os botões")][SerializeField] private RectTransform areaBotoes;
     [Tooltip("Botão do ataque")][SerializeField] private Button botaoAtaque;
-    private GameObject muletinha;
+  
     private GameObject mira;
 	private GameObject fire;
 	private VidaPersonagem vidaPersonagem;
@@ -34,12 +34,7 @@ public class ControlePersonagem : MonoBehaviour {
         movimento = GetComponent<MovimentoPersonagem>();
         camera = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
         mira = GameObject.FindGameObjectWithTag("mira");
-		fire =GameObject.FindGameObjectWithTag("Effect");
-		
-        mira.SetActive(false);
-		fire.SetActive(false);
-		
-       
+        mira.SetActive(false);  
     }
 
     void Start()
@@ -50,12 +45,10 @@ public class ControlePersonagem : MonoBehaviour {
        
     }
 
-    public IEnumerator Atacar(){
-		fire.SetActive(!fire.activeSelf);
+    public IEnumerator Atacar(){;
         mira.SetActive(!mira.activeSelf);
         yield return new WaitForSeconds(1);
         mira.SetActive(!mira.activeSelf);
-		fire.SetActive(!fire.activeSelf);
     }
 
     void Update () {
@@ -79,7 +72,7 @@ public class ControlePersonagem : MonoBehaviour {
 				movimento.Andar ((direction - transform.position).normalized);
             } else {
 				movimento.Andar (Vector2.zero);
-                animator.SetBool("estaAndando", false);
+                animator.SetTrigger("idle");
 			}
 
 		if(vidaPersonagem.isDead()){

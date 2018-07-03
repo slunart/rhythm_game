@@ -3,18 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class TriggerDanoEnemy : MonoBehaviour {
-    [SerializeField] private int dano = 5000;
+    [SerializeField] private int dano;
      VidaPersonagem vpo;
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collider)
     {
          //se inimigo detectado , gere dano no inimigo
-           Debug.Log("Inimigo Atinjido");
-        if (collision.collider.CompareTag("Enemy")) { 
-            Debug.Log("Inimigo Atinjido");
-            vpo = collision.collider.GetComponent<VidaPersonagem>();
-            vpo.SofrerDano(dano);
+        if (collider.CompareTag("Enemy")){ 
+            vpo = collider.GetComponent<VidaPersonagem>();
+             //Se não estiver morto cause dano
+                Debug.Log("Inimigo Atinjido");
+                vpo.SofrerDano(dano);
+            
         }
+
+
     }
     
 

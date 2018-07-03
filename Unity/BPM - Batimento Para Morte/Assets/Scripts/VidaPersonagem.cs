@@ -14,11 +14,14 @@ public class VidaPersonagem : MonoBehaviour {
 	public void SofrerDano(int dano) {
 		vida -= dano;
 	}
-
+    
+	//para saber se está morto ou vivo
 	public bool isDead() {
 		if (vida <= 0) return true;
-		else return false;
+		
+		return false;
 	}
+
 
 
 }

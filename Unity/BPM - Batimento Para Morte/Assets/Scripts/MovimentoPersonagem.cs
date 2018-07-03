@@ -7,7 +7,7 @@ using UnityEngine;
 /// Código do movimento de um personagem.
 /// </summary>
 public class MovimentoPersonagem : MonoBehaviour {
-	[SerializeField] private float velocidade = 1f;
+	[SerializeField] private float velocidade;
 	private Rigidbody2D rb;
     Animator anim;
     Vector3 localScale;
@@ -27,9 +27,14 @@ public class MovimentoPersonagem : MonoBehaviour {
 	public void Andar(Vector2 direcao) {
 		rb.velocity = direcao * velocidade;
         direcaoX = velocidade * Input.GetAxisRaw("Horizontal");
-        anim.SetBool("estaAndando", true);
+        anim.SetTrigger("walk");
         viraParaEsquerda();
 	}
+
+    public void knockBack(Vector2 direction,int force){
+        rb.AddForce(direction * - force);
+    }
+
 
     void viraParaEsquerda()
     {
