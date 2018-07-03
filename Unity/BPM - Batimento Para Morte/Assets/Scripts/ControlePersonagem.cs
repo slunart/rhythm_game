@@ -4,7 +4,14 @@ using UnityEngine;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(MovimentoPersonagem))]
+<<<<<<< HEAD
 
+=======
+[RequireComponent(typeof(HabilidadeTiro))]
+/// <summary>
+/// Código do controle do jogador.
+/// </summary>
+>>>>>>> master
 public class ControlePersonagem : MonoBehaviour {
     const int MOUSE_LEFT = 0;
     private MovimentoPersonagem movimento;
@@ -16,12 +23,22 @@ public class ControlePersonagem : MonoBehaviour {
 
 
     [Header("Teclas")]
+<<<<<<< HEAD
     [SerializeField] private KeyCode ataque = KeyCode.Z;
   
     [Header("Botões")]
     [SerializeField] private RectTransform areaBotoes;
     [SerializeField] private Button botaoTiroGrave; //ataque
     [SerializeField] private Button botaoTiroAgudo;
+=======
+    [Tooltip("Tecla do tiro grave")][SerializeField] private KeyCode teclaTiroGrave = KeyCode.Z;
+    [Tooltip("Tecla do tiro agudo")][SerializeField] private KeyCode teclaTiroAgudo = KeyCode.X;
+    [Header("Botões")]
+    [Tooltip("Área da GUI reservada para os botões")][SerializeField] private RectTransform areaBotoes;
+    [Tooltip("Botão do tiro grave")][SerializeField] private Button botaoTiroGrave;
+    [Tooltip("Botão do tiro agudo")][SerializeField] private Button botaoTiroAgudo;
+    private GameObject muletinha;
+>>>>>>> master
     private GameObject mira;
 	private GameObject fire;
 	private VidaPersonagem vidaPersonagem;
