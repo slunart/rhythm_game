@@ -26,6 +26,7 @@ public class ControlePersonagem : MonoBehaviour {
 	private GameObject fire;
 	private VidaPersonagem vidaPersonagem;
 	private bool alive;
+    Animator animator;
 
 
     void Awake() {
@@ -44,7 +45,7 @@ public class ControlePersonagem : MonoBehaviour {
     {
 		vidaPersonagem = this.GetComponent<VidaPersonagem>();
 		alive = true;
-		
+		animator = GetComponent<Animator>();
        
     }
 
@@ -57,12 +58,10 @@ public class ControlePersonagem : MonoBehaviour {
     }
 
     void Update () {
-	
-
 		Vector2 setas = new Vector2 (Input.GetAxis ("Horizontal"), Input.GetAxis ("Vertical"));
 		if (setas.magnitude > 0.5f) {
 			movimento.Andar (setas.normalized);
-			seguindoMouse = false;
+            seguindoMouse = false;
 		} else {
 			if (Input.GetMouseButtonDown (MOUSE_LEFT) && !clicandoBotoes()) {
 				seguindoMouse = true;
@@ -77,10 +76,10 @@ public class ControlePersonagem : MonoBehaviour {
 			if (seguindoMouse) {
 				if ((direction - transform.position).magnitude <= 0.2f) seguindoMouse = false;
 				movimento.Andar ((direction - transform.position).normalized);
-			} else {
+            } else {
 				movimento.Andar (Vector2.zero);
+                animator.SetBool("estaAndando", false);
 			}
-		}
 
 		if(vidaPersonagem.isDead()){
 			if(alive){
@@ -88,6 +87,7 @@ public class ControlePersonagem : MonoBehaviour {
 			}
 
 		}
+      }
 	}
 
 	bool clicandoBotoes() {
