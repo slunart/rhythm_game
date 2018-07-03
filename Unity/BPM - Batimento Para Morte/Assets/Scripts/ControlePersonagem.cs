@@ -25,7 +25,7 @@ public class ControlePersonagem : MonoBehaviour {
   
     private GameObject mira;
 	private GameObject fire;
-	private VidaPersonagem vidaPersonagem;
+	private StatusPersonagem vidaPersonagem;
 	private bool alive;
     Animator animator;
 
@@ -39,10 +39,9 @@ public class ControlePersonagem : MonoBehaviour {
 
     void Start()
     {
-		vidaPersonagem = this.GetComponent<VidaPersonagem>();
+		vidaPersonagem = this.GetComponent<StatusPersonagem>();
 		alive = true;
-		animator = GetComponent<Animator>();
-       
+		animator = GetComponent<Animator>();       
     }
 
     public IEnumerator Atacar(){;
@@ -75,7 +74,7 @@ public class ControlePersonagem : MonoBehaviour {
                 animator.SetTrigger("idle");
 			}
 
-		if(vidaPersonagem.isDead()){
+		if(vidaPersonagem.IsDead()){
 			if(alive){
 				StartCoroutine(death());
 			}

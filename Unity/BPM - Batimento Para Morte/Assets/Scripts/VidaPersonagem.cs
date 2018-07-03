@@ -5,13 +5,13 @@ using UnityEngine;
 [RequireComponent(typeof(Collider2D))]
 public class VidaPersonagem : MonoBehaviour {
     [SerializeField] private int vida;
-	[SerializeField] private int vidaMax = 1000000000;
+	[SerializeField] private int vidaMax = 1000000000;    
 
-	void Awake () {
+    void Awake () {
 		vida = vidaMax;
-	}
+	}    
 
-	public void SofrerDano(int dano) {
+    public void SofrerDano(int dano) {
 		vida -= dano;
 	}
     
@@ -21,7 +21,5 @@ public class VidaPersonagem : MonoBehaviour {
 		
 		return false;
 	}
-
-
 
 }

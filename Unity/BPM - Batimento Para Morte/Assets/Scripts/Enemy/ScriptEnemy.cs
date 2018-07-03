@@ -21,15 +21,13 @@ private bool facing = true;
 	vidaPersonagem = this.GetComponent<VidaPersonagem>();
 	bEnemy = GetComponent<BoxCollider2D>();
 	alive = true;
-
  }
   
  void Update () {
 	if(!vidaPersonagem.isDead()){
 		move();
 	}else{
-	    if(alive){
-			//se estiver vivo faça a animação da morte 
+	    if(alive){			
 			StartCoroutine(death());
 		}
 	}

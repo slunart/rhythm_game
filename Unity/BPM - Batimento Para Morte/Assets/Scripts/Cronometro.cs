@@ -25,17 +25,12 @@ public class Cronometro : MonoBehaviour {
                 if (((tempo % 1) <= 0.40) && (tempo % 1) >= 0){
                     cont++;
                     isPlaying = true;
-                    if (cont == 1) UIText.text = "Acertou a batida: " + cont.ToString() + " vez";
-                    else
-                        UIText.text = "Acertou a batida: " + cont.ToString() + " vezes";
-                    
-                StartCoroutine(personagem.Atacar());
-                Debug.Log(tempo);
-                }
-                else {
-                    Debug.Log("Errou a Batida");
-                    v = personagem.GetComponent<VidaPersonagem>();
-                    v.SofrerDano(1000);
+                    UIText.text = "Acertos: " + cont.ToString();                                        
+                    StartCoroutine(personagem.Atacar());                    
+                }else {
+                    //Debug.Log("Errou a Batida");
+                    //v = personagem.GetComponent<VidaPersonagem>();
+                    //v.SofrerDano(1000);
                 }
             }
 
