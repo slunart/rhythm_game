@@ -121,7 +121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minDist: 0
-  speed: 0.7
+  speed: 0.4
 --- !u!114 &114111448414309816
 MonoBehaviour:
   m_ObjectHideFlags: 1

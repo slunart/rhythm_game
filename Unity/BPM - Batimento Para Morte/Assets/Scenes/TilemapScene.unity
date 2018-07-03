@@ -2727,8 +2727,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   alvoPrefab: {fileID: 1821309871414334, guid: 678f60095ebf24396a0cf3dd47ac64c2, type: 2}
-  raioAlcance: 3
-  InimigosInitial: 1
+  raioAlcance: 8
+  InimigosInitial: 5
+  InimigosLevel: 10
 --- !u!1 &808362323
 GameObject:
   m_ObjectHideFlags: 0
