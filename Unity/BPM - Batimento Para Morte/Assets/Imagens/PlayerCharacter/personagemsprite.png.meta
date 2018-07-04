@@ -1,0 +1,820 @@
+fileFormatVersion: 2
+guid: 60fc86a369d0c8e489dd7ca726fd8839
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: personagemsprite
+    21300002: wizard_fire-1_IDLE_000
+    21300004: wizard_fire-1_IDLE_001
+    21300006: wizard_fire-1_IDLE_002
+    21300008: wizard_fire-1_IDLE_003
+    21300010: wizard_fire-1_IDLE_004
+    21300012: wizard_fire-2_WALK_000
+    21300014: wizard_fire-2_WALK_001
+    21300016: wizard_fire-2_WALK_002
+    21300018: wizard_fire-2_WALK_003
+    21300020: wizard_fire-2_WALK_004
+    21300022: wizard_fire-3_RUN_000
+    21300024: wizard_fire-3_RUN_001
+    21300026: wizard_fire-3_RUN_002
+    21300028: wizard_fire-3_RUN_003
+    21300030: wizard_fire-3_RUN_004
+    21300032: wizard_fire-4_JUMP_000
+    21300034: wizard_fire-4_JUMP_001
+    21300036: wizard_fire-4_JUMP_002
+    21300038: wizard_fire-4_JUMP_003
+    21300040: wizard_fire-4_JUMP_004
+    21300042: wizard_fire-5_ATTACK_000
+    21300044: wizard_fire-5_ATTACK_002
+    21300046: wizard_fire-5_ATTACK_004
+    21300048: wizard_fire-5_ATTACK_005
+    21300050: wizard_fire-5_ATTACK_006
+    21300052: wizard_fire-6_HURT_000
+    21300054: wizard_fire-6_HURT_001
+    21300056: wizard_fire-6_HURT_002
+    21300058: wizard_fire-6_HURT_003
+    21300060: wizard_fire-6_HURT_004
+    21300062: wizard_fire-7_DIE_000
+    21300064: wizard_fire-7_DIE_003
+    21300066: wizard_fire-7_DIE_007
+    21300068: wizard_fire-7_DIE_009
+    21300070: wizard_fire-7_DIE_014
+  externalObjects: {}
+  serializedVersion: 5
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: wizard_fire-1_IDLE_000
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 2145
+        width: 359
+        height: 398
+      alignment: 9
+      pivot: {x: 0.48328692, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08411df62987b4c5c89f4f5d5fabf1ee
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizard_fire-1_IDLE_001
+      rect:
+        serializedVersion: 2
+        x: 1496
+        y: 2510
+        width: 356
+        height: 396
+      alignment: 9
+      pivot: {x: 0.4985955, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6d94bccfe2434e41b9405e1630518b0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizard_fire-1_IDLE_002
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1345
+        width: 352
+        height: 393
+      alignment: 9
+      pivot: {x: 0.51278406, y: 0.49872774}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5533a3e9fdf4045409dd25b682f1dca7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizard_fire-1_IDLE_003
+      rect:
+        serializedVersion: 2
+        x: 1467
+        y: 2115
+        width: 352
+        height: 393
+      alignment: 9
+      pivot: {x: 0.51278406, y: 0.49872774}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92b51e1aa9b634ab9a00b421bfb5aa9e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizard_fire-1_IDLE_004
+      rect:
+        serializedVersion: 2
+        x: 1109
+        y: 2122
+        width: 356
+        height: 396
+      alignment: 9
+      pivot: {x: 0.4985955, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4189e70f5df44faba9370fe598bf002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizard_fire-2_WALK_000
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 1352
+        width: 339
+        height: 392
+      alignment: 9
+      pivot: {x: 0.58112097, y: 0.46811223}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d197dc2c6765a46adb06a63a2a8b70cc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizard_fire-2_WALK_001
+      rect:
+        serializedVersion: 2
+        x: 733
+        y: 1746
+        width: 355
+        height: 397
+      alignment: 9
+      pivot: {x: 0.5267606, y: 0.47732997}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0a1ac93fb39f49b1b65d33bfadd32f2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizard_fire-2_WALK_002
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 2512
+        width: 369
+        height: 399
+      alignment: 9
+      pivot: {x: 0.4796748, y: 0.4849624}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f69e5cca1025a44eeafa9c8e9758eb16
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizard_fire-2_WALK_003
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 2139
+        width: 369
+        height: 399
+      alignment: 9
+      pivot: {x: 0.4796748, y: 0.4849624}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3816c211b5edb49eeb44595dd73b7f69
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizard_fire-2_WALK_004
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 1713
+        width: 355
+        height: 397
+      alignment: 9
+      pivot: {x: 0.5267606, y: 0.47732997}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 609e9ec28e2ea4c5e8596055d91b586b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizard_fire-3_RUN_000
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 967
+        width: 330
+        height: 376
+      alignment: 9
+      pivot: {x: 0.7030303, y: 0.46143618}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2ff8af5257114f2daaa9ae8313affb2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizard_fire-3_RUN_001
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 2924
+        width: 382
+        height: 397
+      alignment: 9
+      pivot: {x: 0.565445, y: 0.4672544}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b59c8d59c2d0f49b4b1f0e8076218ce7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizard_fire-3_RUN_002
+      rect:
+        serializedVersion: 2
+        x: 1458
+        y: 3693
+        width: 419
+        height: 402
+      alignment: 9
+      pivot: {x: 0.46778044, y: 0.45895523}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc82d8c0406a04761aac25c4e904f7b2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizard_fire-3_RUN_003
+      rect:
+        serializedVersion: 2
+        x: 1030
+        y: 3332
+        width: 419
+        height: 399
+      alignment: 9
+      pivot: {x: 0.46778044, y: 0.4548872}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b15651af2bcb43c495cade006a2c2b2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizard_fire-3_RUN_004
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 2933
+        width: 382
+        height: 397
+      alignment: 9
+      pivot: {x: 0.565445, y: 0.4672544}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb918b623d9fa459cbd6979c29b241a3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizard_fire-4_JUMP_000
+      rect:
+        serializedVersion: 2
+        x: 1583
+        y: 2908
+        width: 359
+        height: 399
+      alignment: 9
+      pivot: {x: 0.46239555, y: 0.5764411}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b449d3cb491e42528b1810c78caa046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizard_fire-4_JUMP_001
+      rect:
+        serializedVersion: 2
+        x: 1209
+        y: 2921
+        width: 372
+        height: 386
+      alignment: 9
+      pivot: {x: 0.48118278, y: 0.4974093}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa758e51563924cf3b9e5e6eae6fddf5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizard_fire-4_JUMP_002
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 2540
+        width: 374
+        height: 382
+      alignment: 9
+      pivot: {x: 0.4973262, y: 0.42670158}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 130e68afd75714608aa19523214f5f08
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizard_fire-4_JUMP_003
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 2913
+        width: 374
+        height: 383
+      alignment: 9
+      pivot: {x: 0.4973262, y: 0.42558748}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fa74220d99f54d32af6dec2ba859e8e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizard_fire-4_JUMP_004
+      rect:
+        serializedVersion: 2
+        x: 761
+        y: 2545
+        width: 372
+        height: 386
+      alignment: 9
+      pivot: {x: 0.48118278, y: 0.4974093}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5ac27c3399534e6f9a5ff3ad2074b5d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizard_fire-5_ATTACK_000
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 2112
+        width: 359
+        height: 398
+      alignment: 9
+      pivot: {x: 0.74930364, y: 0.46231157}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12de4b6a879ce426db753e91be8b44e1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizard_fire-5_ATTACK_002
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 1325
+        width: 336
+        height: 386
+      alignment: 9
+      pivot: {x: 0.8541667, y: 0.48704663}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b375ded3c0f7f44a0be802dc828b1265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizard_fire-5_ATTACK_004
+      rect:
+        serializedVersion: 2
+        x: 1090
+        y: 1719
+        width: 346
+        height: 401
+      alignment: 9
+      pivot: {x: 0.79479766, y: 0.4563591}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4150fbca40d04991ad7d6d51e2ca23f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizard_fire-5_ATTACK_005
+      rect:
+        serializedVersion: 2
+        x: 597
+        y: 3682
+        width: 431
+        height: 413
+      alignment: 9
+      pivot: {x: 0.62412995, y: 0.46004844}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d369613ff1d42405e9917d34863ea87b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizard_fire-5_ATTACK_006
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 3687
+        width: 594
+        height: 408
+      alignment: 9
+      pivot: {x: 0.45117846, y: 0.45588234}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea28997e74b2b4ff2ab197417d22384c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizard_fire-6_HURT_000
+      rect:
+        serializedVersion: 2
+        x: 1135
+        y: 2520
+        width: 359
+        height: 399
+      alignment: 9
+      pivot: {x: 0.4568245, y: 0.4924812}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74afd541b9da749b680ce5b8d7d865ea
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizard_fire-6_HURT_001
+      rect:
+        serializedVersion: 2
+        x: 1451
+        y: 3309
+        width: 394
+        height: 382
+      alignment: 9
+      pivot: {x: 0.4543147, y: 0.5091623}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 833a7785b5f874a44a9f97b6128d0bed
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizard_fire-6_HURT_002
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 3323
+        width: 426
+        height: 362
+      alignment: 9
+      pivot: {x: 0.45070422, y: 0.55662984}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c38a83cac556c475f88e4b7ed9fbce0c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizard_fire-6_HURT_003
+      rect:
+        serializedVersion: 2
+        x: 1030
+        y: 3733
+        width: 426
+        height: 362
+      alignment: 9
+      pivot: {x: 0.45070422, y: 0.55662984}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42e51a89cdab94a3bad4ed1b59cad623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizard_fire-6_HURT_004
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 3298
+        width: 394
+        height: 382
+      alignment: 9
+      pivot: {x: 0.4543147, y: 0.5091623}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86327b220fc654de29fd62b4a9ede162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizard_fire-7_DIE_000
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1740
+        width: 359
+        height: 397
+      alignment: 9
+      pivot: {x: 0.5097493, y: 0.4647355}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 075434469c0e847c1b80912994731b05
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizard_fire-7_DIE_003
+      rect:
+        serializedVersion: 2
+        x: 1438
+        y: 1753
+        width: 283
+        height: 360
+      alignment: 9
+      pivot: {x: 0.61130744, y: 0.5625}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c76da73d7b866427ab98544c9c7f97d9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizard_fire-7_DIE_007
+      rect:
+        serializedVersion: 2
+        x: 1438
+        y: 1464
+        width: 260
+        height: 287
+      alignment: 9
+      pivot: {x: 0.64615387, y: 0.6149826}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f347b0dd777444d29a1d5c4edc2a6ab7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizard_fire-7_DIE_009
+      rect:
+        serializedVersion: 2
+        x: 1723
+        y: 1877
+        width: 261
+        height: 236
+      alignment: 9
+      pivot: {x: 0.63984674, y: 0.72669494}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5718530dd8a345c49cbcf00eb9676de
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wizard_fire-7_DIE_014
+      rect:
+        serializedVersion: 2
+        x: 1723
+        y: 1682
+        width: 261
+        height: 193
+      alignment: 9
+      pivot: {x: 0.63984674, y: 0.88860106}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcfd4fdfabdfb4cefa9611c21214535d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

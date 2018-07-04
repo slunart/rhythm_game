@@ -4,9 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - muleta_frontal
-  - muleta_costas
   - mira
+  - Enemy
+  - Effect
   layers:
   - Default
   - TransparentFX
