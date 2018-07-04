@@ -1092,6 +1092,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   liveText: {fileID: 1719877004}
+  strikesText: {fileID: 2094546181}
 --- !u!1 &493008127
 GameObject:
   m_ObjectHideFlags: 0
@@ -2652,7 +2653,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 6
+  orthographic size: 3
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2687,7 +2688,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 709533233}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a32daa13ef4c64cbcb90505105565f4c, type: 3}
   m_Name: 
@@ -2736,7 +2737,7 @@ MonoBehaviour:
   alvoPrefab: {fileID: 1821309871414334, guid: 678f60095ebf24396a0cf3dd47ac64c2, type: 2}
   raioAlcance: 8
   InimigosInitial: 5
-  InimigosLevel: 10
+  InimigosLevel: 25
 --- !u!1 &808362323
 GameObject:
   m_ObjectHideFlags: 0
@@ -3182,7 +3183,6 @@ GameObject:
   - component: {fileID: 1752361086}
   - component: {fileID: 1752361091}
   - component: {fileID: 1752361085}
-  - component: {fileID: 1752361088}
   - component: {fileID: 1752361092}
   - component: {fileID: 1752361093}
   - component: {fileID: 1752361090}
@@ -3208,7 +3208,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.3
 --- !u!212 &1752361086
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3267,19 +3267,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1752361088
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1752361084}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 770a81ead0bae3e4a821b851a5953531, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  vida: 20000
-  vidaMax: 20000
 --- !u!95 &1752361089
 Animator:
   serializedVersion: 3
@@ -3311,6 +3298,9 @@ MonoBehaviour:
   ataque: 122
   areaBotoes: {fileID: 45386733}
   botaoAtaque: {fileID: 0}
+  tempo: 0.23
+  cont: 0
+  isPlaying: 0
 --- !u!50 &1752361091
 Rigidbody2D:
   serializedVersion: 4
@@ -3354,7 +3344,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 510b2864e1b1159429443432e38d1fc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vida: 0
+  vida: 20000
   vidaMax: 20000
 --- !u!1 &1762430678
 GameObject:
@@ -3444,7 +3434,6 @@ GameObject:
   - component: {fileID: 2094546179}
   - component: {fileID: 2094546182}
   - component: {fileID: 2094546181}
-  - component: {fileID: 2094546180}
   m_Layer: 5
   m_Name: TextCorrect
   m_TagString: Untagged
@@ -3470,23 +3459,6 @@ RectTransform:
   m_AnchoredPosition: {x: -125, y: -50}
   m_SizeDelta: {x: 201, y: 41.7}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2094546180
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2094546178}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73e5c0e694807d54d9f3db96259dc0b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UIText: {fileID: 2094546181}
-  tempo: 0
-  cont: 0
-  isPlaying: 0
-  personagem: {fileID: 1752361090}
-  v: {fileID: 0}
 --- !u!114 &2094546181
 MonoBehaviour:
   m_ObjectHideFlags: 0

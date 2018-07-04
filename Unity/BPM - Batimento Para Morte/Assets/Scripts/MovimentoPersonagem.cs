@@ -27,7 +27,7 @@ public class MovimentoPersonagem : MonoBehaviour {
 	public void Andar(Vector2 direcao) {
 		rb.velocity = direcao * velocidade;
         direcaoX = velocidade * Input.GetAxisRaw("Horizontal");
-        anim.SetTrigger("walk");
+        anim.SetBool("walk", true);        
         viraParaEsquerda();
 	}
 

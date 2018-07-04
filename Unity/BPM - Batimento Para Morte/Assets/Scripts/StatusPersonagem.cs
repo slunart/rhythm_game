@@ -30,8 +30,11 @@ public class StatusPersonagem : MonoBehaviour {
         if (imortality) return;
 
         vida -= dano;
-        if(vida != 0) StartCoroutine(ImortalityCoroutine());        
+
         if (OnUpdateLive != null) OnUpdateLive(vida);
+
+        if (IsDead()) return;
+        StartCoroutine(ImortalityCoroutine());        
     }
 
     IEnumerator ImortalityCoroutine()
@@ -51,8 +54,7 @@ public class StatusPersonagem : MonoBehaviour {
     //para saber se está morto ou vivo
     public bool IsDead()
     {
-        if (vida <= 0)
-            return true;
+        if (vida <= 0) return true;
 
         return false;
     }
