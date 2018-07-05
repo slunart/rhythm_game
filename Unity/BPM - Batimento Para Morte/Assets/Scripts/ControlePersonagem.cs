@@ -61,7 +61,7 @@ public class ControlePersonagem : MonoBehaviour {
 
     IEnumerator Atacar(){
         mira.SetActive(!mira.activeSelf);
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.5f);
         mira.SetActive(!mira.activeSelf);
     }
 
@@ -90,7 +90,7 @@ public class ControlePersonagem : MonoBehaviour {
     {
         tempo += Time.deltaTime;
         //Se musica esta Tocando e Aperta Z, entre os momentos certo
-        if (!isPlaying && Input.GetKeyDown(KeyCode.Z))
+        if (!isPlaying && Input.GetKeyDown(ataque))
         {
             if (tempo<tempoBatida) //se o tempo da batida for menor que o tempo atual é um movimento válido
             {
@@ -106,7 +106,7 @@ public class ControlePersonagem : MonoBehaviour {
             }
         }
 
-        if (Input.GetKeyUp(KeyCode.Z))
+        if (Input.GetKeyUp(ataque))
         {
             isPlaying = false;
         }
