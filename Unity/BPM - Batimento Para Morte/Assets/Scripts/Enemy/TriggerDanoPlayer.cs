@@ -11,7 +11,7 @@ public class TriggerDanoPlayer : MonoBehaviour {
         if (collider.CompareTag("Player")) {
             //Se não estiver morto cause dano
             vpo = collider.GetComponent<StatusPersonagem>();
-            Debug.Log("Inimigo Causa dano"); 
+            //Debug.Log("Inimigo Causa dano"); 
             vpo.SofrerDano(dano);
 
             if (vpo.IsDead()) return;            

@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+using System; //adicionado para musica
+
 [RequireComponent(typeof(MovimentoPersonagem))]
 /// <summary>
 /// Código do controle do jogador.
@@ -33,6 +35,7 @@ public class ControlePersonagem : MonoBehaviour {
     Animator animator;    
 
     public float tempo = 0.23f;
+	public float tempoBatida = 0f;
     public int cont = 0;
     public bool isPlaying = false;    
 
@@ -40,6 +43,11 @@ public class ControlePersonagem : MonoBehaviour {
     void Awake() {
         movimento = GetComponent<MovimentoPersonagem>();       
         camera = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
+		AudioProcessor processor = GameObject.FindWithTag("MainCamera").GetComponent<AudioProcessor> ();
+		processor.onBeat.AddListener (onOnbeatDetected);
+		
+		
+		
         mira = GameObject.FindGameObjectWithTag("mira");
         mira.SetActive(false);  
     }
@@ -67,18 +75,29 @@ public class ControlePersonagem : MonoBehaviour {
         } 
 	}
 
+    private float delay = 0.65f; //65 milissegundos para reagir
+	void onOnbeatDetected ()
+	{
+		//detecta batida , pelo algoritmo do cara
+		Debug.Log("Tempo "+ tempo);
+		tempoBatida = tempo+delay;
+		//tempo da batida
+		Debug.Log ("Beat!!! "+tempoBatida);
+	}
+	
+	
     void Attack()
     {
         tempo += Time.deltaTime;
         //Se musica esta Tocando e Aperta Z, entre os momentos certo
         if (!isPlaying && Input.GetKeyDown(KeyCode.Z))
         {
-            if (((tempo % 1) <= 0.60) && (tempo % 1) >= 0.2)
+            if (tempo<tempoBatida) //se o tempo da batida for menor que o tempo atual é um movimento válido
             {
-                cont++;
-                isPlaying = true;
-                if (OnUpdateStrikeTime != null) OnUpdateStrikeTime(cont);
-                StartCoroutine(Atacar());                
+			   cont++;
+			   isPlaying = true;
+			   if (OnUpdateStrikeTime != null) OnUpdateStrikeTime(cont);
+			   StartCoroutine(Atacar());	
             }
             else
             {
