@@ -6,7 +6,17 @@ using UnityEngine;
 public class StatusPersonagem : MonoBehaviour {
 
     [SerializeField] private int vida;
+	public int Vida {
+		get {
+			return vida > 0 ? vida : 0;
+		}
+	}
     [SerializeField] private int vidaMax = 20000;
+	public int VidaMax {
+		get {
+			return vidaMax;
+		}
+	}
 
     bool imortality = false;
     SpriteRenderer render;
