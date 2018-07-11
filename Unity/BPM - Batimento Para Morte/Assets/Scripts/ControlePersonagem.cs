@@ -39,6 +39,7 @@ public class ControlePersonagem : MonoBehaviour {
     public int cont = 0;
     public bool isPlaying = false;    
 
+    private MoveCircle mv;
 
     void Awake() {
         movimento = GetComponent<MovimentoPersonagem>();       
@@ -46,7 +47,7 @@ public class ControlePersonagem : MonoBehaviour {
 		AudioProcessor processor = GameObject.FindWithTag("MainCamera").GetComponent<AudioProcessor> ();
 		processor.onBeat.AddListener (onOnbeatDetected);
 		
-		
+		mv = GameObject.FindWithTag("Hit").GetComponent<MoveCircle> ();
 		
         mira = GameObject.FindGameObjectWithTag("mira");
         mira.SetActive(false);  
@@ -79,20 +80,20 @@ public class ControlePersonagem : MonoBehaviour {
 	void onOnbeatDetected ()
 	{
 		//detecta batida , pelo algoritmo do cara
-		Debug.Log("Tempo "+ tempo);
+		//Debug.Log("Tempo "+ tempo);
 		tempoBatida = tempo+delay;
 		//tempo da batida
-		Debug.Log ("Beat!!! "+tempoBatida);
+		//Debug.Log ("Beat!!! "+tempoBatida);
 	}
 	
 	
     void Attack()
     {
-        tempo += Time.deltaTime;
+
         //Se musica esta Tocando e Aperta Z, entre os momentos certo
         if (!isPlaying && Input.GetKeyDown(ataque))
         {
-            if (tempo<tempoBatida) //se o tempo da batida for menor que o tempo atual é um movimento válido
+            if (mv.sicronizo) //se o tempo da batida for menor que o tempo atual é um movimento válido
             {
 			   cont++;
 			   isPlaying = true;
